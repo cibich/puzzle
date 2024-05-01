@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TwinMovement : MonoBehaviour, IMovable
@@ -9,6 +10,7 @@ public class TwinMovement : MonoBehaviour, IMovable
     [SerializeField] private TriggerHandler _triggerHandler;
     [SerializeField] private float _speed = 2f;
     [SerializeField] private Vector2 _direction;
+    private Stack<Vector3> _navPositions=new Stack<Vector3>();
     public bool IsMoving { get; set; } = false;
 
     public void Move()
@@ -46,7 +48,9 @@ public class TwinMovement : MonoBehaviour, IMovable
     {
         if (_movesPlayer.PlayerPositions.Count > 0)
         {
-            _direction = _movesPlayer.PlayerPositions.Dequeue();
+            foreach (var position in _movesPlayer.PlayerPositions)
+                _navPositions.Push(position);
+            _direction = _navPositions.Pop();
             IsMoving = true;
         }
     }
@@ -62,7 +66,7 @@ public class TwinMovement : MonoBehaviour, IMovable
     private void SetNextTarget()
     {
         if (_movesPlayer.PlayerPositions.Count > 0)
-            _direction = _movesPlayer.PlayerPositions.Dequeue();
+            _direction = _navPositions.Pop();
         else
             IsMoving = false;
     }

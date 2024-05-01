@@ -5,9 +5,9 @@ using UnityEngine;
 public class MoveContainer : MonoBehaviour
 {
     [SerializeField] private Transform _player;
-    private float _interval = 0.2f;
+    private float _interval = 0.1f;
     private bool _isRecording = true;
-    public Queue<Vector2> PlayerPositions { get; private set; }
+    public Stack<Vector3> PlayerPositions { get; private set; }
     public float Duration { get; private set; }
 
     private void OnEnable() => UserInput.OnPressF += FinishRecording;
@@ -18,8 +18,8 @@ public class MoveContainer : MonoBehaviour
 
     private void Start()
     {
-        PlayerPositions = new Queue<Vector2>();
-        PlayerPositions.Enqueue(_player.position);
+        PlayerPositions = new Stack<Vector3>();
+        PlayerPositions.Push(_player.position);
         StartCoroutine(RecordPlayerPosition());
     }
 
@@ -28,9 +28,11 @@ public class MoveContainer : MonoBehaviour
         WaitForSeconds wait = new WaitForSeconds(_interval);
         while (_isRecording)
         {
-            if ((Vector2)_player.position != PlayerPositions.Peek())
-                PlayerPositions.Enqueue(_player.position);
+            Debug.Log(PlayerPositions.Count);
+            if (Vector3.Distance(_player.position, PlayerPositions.Peek()) > 0.1f)
+                PlayerPositions.Push(_player.position);
             yield return wait;
         }
+        yield break;
     }
 }

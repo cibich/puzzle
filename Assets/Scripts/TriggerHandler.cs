@@ -20,6 +20,5 @@ public class TriggerHandler : MonoBehaviour
             OnMirrorTouch?.Invoke(Vector2.left);
         if (collision.CompareTag(Tags.FINISH))
             OnFinishing?.Invoke();
-
     }
 }

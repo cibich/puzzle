@@ -22,7 +22,6 @@ public class PatrolMove : MonoBehaviour, IMovable
 
     private void Start()
     {
-        _pointA = transform.position;
         _target = _pointB;
     }
 
