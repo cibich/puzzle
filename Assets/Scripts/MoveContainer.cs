@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveContainer : MonoBehaviour
 {
     [SerializeField] private Transform _player;
-    private float _interval = 0.1f;
+    private float _interval = 0.05f;
     private bool _isRecording = true;
     public Stack<Vector3> PlayerPositions { get; private set; }
     public float Duration { get; private set; }
@@ -28,7 +28,6 @@ public class MoveContainer : MonoBehaviour
         WaitForSeconds wait = new WaitForSeconds(_interval);
         while (_isRecording)
         {
-            Debug.Log(PlayerPositions.Count);
             if (Vector3.Distance(_player.position, PlayerPositions.Peek()) > 0.1f)
                 PlayerPositions.Push(_player.position);
             yield return wait;

@@ -1,10 +1,10 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class TriggerHandler : MonoBehaviour
 {
     public Action<float> OnBoostSpeed;
-    public Action<Vector2> OnMirrorTouch;
     public Action OnFinishing;
 
     private float _accelerationMultiplier = 2f;
@@ -16,9 +16,13 @@ public class TriggerHandler : MonoBehaviour
             OnBoostSpeed?.Invoke(_accelerationMultiplier);
         if (collision.CompareTag(Tags.SLOWSPEED))
             OnBoostSpeed?.Invoke(_slowMultiplier);
-        if (collision.CompareTag(Tags.MIRROR))
-            OnMirrorTouch?.Invoke(Vector2.left);
         if (collision.CompareTag(Tags.FINISH))
-            OnFinishing?.Invoke();
+            StartCoroutine(DelayedNotification());
+    }
+
+    IEnumerator DelayedNotification()
+    {
+        yield return new WaitForSeconds(0.2f);
+        OnFinishing?.Invoke();
     }
 }

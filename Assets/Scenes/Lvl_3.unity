@@ -364,6 +364,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1916284825}
     - target: {fileID: 5699932474475718551, guid: d63cdb2ff6cf7a14b856359b281bd66d, type: 3}
+      propertyPath: _gameStateHandler
+      value: 
+      objectReference: {fileID: 1757901669}
+    - target: {fileID: 5699932474475718551, guid: d63cdb2ff6cf7a14b856359b281bd66d, type: 3}
       propertyPath: _playerTriggerHandler
       value: 
       objectReference: {fileID: 1916284825}
@@ -849,6 +853,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3072854575381462814, guid: 5385c643a7a18be4f8108f281d3e4e66, type: 3}
+      propertyPath: _playerMoves
+      value: 
+      objectReference: {fileID: 1916284824}
+    - target: {fileID: 3072854575381462814, guid: 5385c643a7a18be4f8108f281d3e4e66, type: 3}
+      propertyPath: _gameStateHandler
+      value: 
+      objectReference: {fileID: 1757901669}
     - target: {fileID: 3592363606157120718, guid: 5385c643a7a18be4f8108f281d3e4e66, type: 3}
       propertyPath: m_Name
       value: Twin
@@ -1180,11 +1192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.02
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.09
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1860,5 +1872,5 @@ SceneRoots:
   - {fileID: 922624387}
   - {fileID: 1897571602}
   - {fileID: 8574219460426915127}
-  - {fileID: 267374093}
   - {fileID: 1302077542}
+  - {fileID: 267374093}

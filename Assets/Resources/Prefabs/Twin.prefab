@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6083179285143757109}
   - component: {fileID: 3023418570988080981}
   - component: {fileID: 7001698878753707665}
+  - component: {fileID: 3072854575381462814}
   - component: {fileID: 609217997465499026}
   - component: {fileID: 9108682530482780560}
   m_Layer: 7
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8784314, g: 0.81960785, b: 0.69411767, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -164,11 +165,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameStateHandler: {fileID: 0}
-  _movesPlayer: {fileID: 0}
+  _movePoints: {fileID: 3072854575381462814}
   _rb: {fileID: 3023418570988080981}
   _triggerHandler: {fileID: 9108682530482780560}
   _speed: 2
   _direction: {x: 0, y: 0}
+--- !u!114 &3072854575381462814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3592363606157120718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ede67e533caee3419aebedd6b0560de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isReverseMove: 0
+  _gameStateHandler: {fileID: 8671570535976928358, guid: 8d01848397f5e6742b6cd0c72b7d0319, type: 3}
+  _playerMoves: {fileID: 6727385002583516594, guid: 3ba8effe9f6f2ae47a138e5e65c28844, type: 3}
 --- !u!114 &609217997465499026
 MonoBehaviour:
   m_ObjectHideFlags: 0

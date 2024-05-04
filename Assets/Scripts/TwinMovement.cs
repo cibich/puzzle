@@ -1,16 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TwinMovement : MonoBehaviour, IMovable
 {
     [SerializeField] private GameStateHandler _gameStateHandler;
-    [SerializeField] private MoveContainer _movesPlayer;
+    [SerializeField] private TwinMovePoints _movePoints;
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private TriggerHandler _triggerHandler;
     [SerializeField] private float _speed = 2f;
     [SerializeField] private Vector2 _direction;
-    private Stack<Vector3> _navPositions=new Stack<Vector3>();
     public bool IsMoving { get; set; } = false;
 
     public void Move()
@@ -46,11 +44,9 @@ public class TwinMovement : MonoBehaviour, IMovable
 
     private void StartMoving()
     {
-        if (_movesPlayer.PlayerPositions.Count > 0)
+        if (_movePoints.MovePoints.Count > 0)
         {
-            foreach (var position in _movesPlayer.PlayerPositions)
-                _navPositions.Push(position);
-            _direction = _navPositions.Pop();
+            _direction = _movePoints.MovePoints.Pop();
             IsMoving = true;
         }
     }
@@ -65,8 +61,8 @@ public class TwinMovement : MonoBehaviour, IMovable
 
     private void SetNextTarget()
     {
-        if (_movesPlayer.PlayerPositions.Count > 0)
-            _direction = _navPositions.Pop();
+        if (_movePoints.MovePoints.Count > 0)
+            _direction = _movePoints.MovePoints.Pop();
         else
             IsMoving = false;
     }
