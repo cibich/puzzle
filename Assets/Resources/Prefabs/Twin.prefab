@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9150943, g: 0.85898006, b: 0.85898006, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -183,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isReverseMove: 0
-  _gameStateHandler: {fileID: 8671570535976928358, guid: 8d01848397f5e6742b6cd0c72b7d0319, type: 3}
-  _playerMoves: {fileID: 6727385002583516594, guid: 3ba8effe9f6f2ae47a138e5e65c28844, type: 3}
+  _gameStateHandler: {fileID: 0}
+  _playerMoves: {fileID: 0}
 --- !u!114 &609217997465499026
 MonoBehaviour:
   m_ObjectHideFlags: 0

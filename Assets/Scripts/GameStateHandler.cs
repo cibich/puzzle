@@ -46,14 +46,12 @@ public class GameStateHandler : MonoBehaviour
     {
         StopAllMoves();
         OnRoundCompleted?.Invoke();
-        Debug.Log("Round Completed");
     }
 
     private void GameOver()
     {
         StopAllMoves();
         OnGameOver?.Invoke();
-        Debug.Log("Game Over");
     }
 
     private void StopAllMoves()

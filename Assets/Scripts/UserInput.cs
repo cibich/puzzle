@@ -20,7 +20,6 @@ public class UserInput : MonoBehaviour
     { 
         _player.Direction = new Vector2(Input.GetAxis(HORIZONTAL), Input.GetAxis(VERTICAL));
 
-        Debug.Log(_playerIsFinished);
         if (Input.GetKeyDown(KeyCode.F) && _playerIsFinished)
         {
             OnPressF?.Invoke();
