@@ -1259,8 +1259,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6835440209513526244, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835440209513526244, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835440209513526244, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835440209513526244, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 150
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 7758614839901945983, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1269,6 +1281,14 @@ PrefabInstance:
     - target: {fileID: 7758614839901945983, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377239355893096540, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1879502136}
+    - target: {fileID: 8377239355893096540, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 8491793312541933859, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
       propertyPath: m_Camera

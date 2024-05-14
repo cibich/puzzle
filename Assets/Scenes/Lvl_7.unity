@@ -1206,6 +1206,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNextScene
       objectReference: {fileID: 0}
+    - target: {fileID: 8377239355893096540, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1107600352}
+    - target: {fileID: 8377239355893096540, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
     - target: {fileID: 8491793312541933859, guid: 61c606242474d2543b1aee7c445eecea, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1311,7 +1319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1626,7 +1634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4924080659882174985, guid: 1ed884c3f19f0e048bd46e8dea63cae6, type: 3}
       propertyPath: m_LocalPosition.z
